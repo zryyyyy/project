@@ -1,0 +1,13 @@
+.type{height: 20px;margin-top: 40px;}
+.type label{float: left; margin-left: 50px;}
+.type .input1{float: left;margin-left: 20px;}
+.type .input1 input{padding-left: 20px;}
+.type .input1 span{margin-right:20px;}
+.tile{position: relative;}
+.describe{margin-bottom: 10px;}
+.describe label{position: absolute;left: 50px;top: 20px;}
+.describe  textarea{margin-left: -158px;margin-top: 24px;}
+.add{display: block;width: 365px;vertical-align: middle;background-color: #fff;height: 40px;position: absolute;left: 139px;}
+.tile a{margin: 40px 0;margin-left: 50px;}
+.type .pdi{margin-left: 86px;margin-top: 5px;}
+.address{margin-top: 8px;}

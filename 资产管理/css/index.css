@@ -1,0 +1,5 @@
+.widget-small .info p{margin-left: 100px;font-size: 30px;}
+*, *::before, *::after{position: relative;}
+.treeview-menu  li b{color: white;height: 20px;width: 20px;border-radius: 100%;background: red;position: absolute;right: 10px;line-height: 20px;text-align: center;}
+.treeview{padding-bottom: 10px;}
+.treeview-menu li{padding: 10px 0;}

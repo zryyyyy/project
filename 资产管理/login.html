@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="public/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="material-half-bg">
+      <div class="cover"></div>
+    </section>
+    <section class="login-content">
+      <div class="logo">
+        <img src="images/user.png" style="height: 80px;height: 80px;" alt="">
+      </div>
+      <div class="login-box">
+        <form class="login-form" action="index.html">
+          <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
+          <div class="form-group">
+            <label class="control-label">账户</label>
+            <input class="form-control" type="text" placeholder="请输入手机号" autofocus>
+          </div>
+          <div class="form-group">
+            <label class="control-label">密码</label>
+            <input class="form-control" type="password" placeholder="请输入密码">
+          </div>
+         
+          <div class="form-group btn-container">
+            <button class="btn btn-primary btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>SIGN IN</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+
+ 
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="js/plugins/pace.min.js"></script>
+    <script type="text/javascript">
+        // Login Page Flipbox control
+        $('.login-content [data-toggle="flip"]').click(function () {
+            $('.login-box').toggleClass('flipped');
+            return false;
+        });
+    </script>
+</body>
+</html>
