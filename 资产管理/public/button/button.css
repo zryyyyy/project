@@ -183,6 +183,9 @@
     box-shadow: none !important;
     opacity: .8 !important;
 }
+button{
+    border-width: 1px!important;
+}
 
 /*
 * Base Button Tyography

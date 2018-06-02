@@ -50,7 +50,7 @@
     "data":{
             //数据信息
             "status":true,//存储状态[boolean:必填]存储成功|false存储失败
-            "save":保存成功
+            "save":添加成功
     }
     }
 ## 我的订单
@@ -61,15 +61,8 @@
     GET
 #### 请求参数
     {
-        number:"123456",//[String:必填]
-        mseeage:"空调坏了",//[String:可空]
+        state:"0",//0未处理|1进行中|2已完成|3已删除    
         B_Person:"张三",//[String:必填]
-        address:"北科",//[String:必填]
-        B_date:"String",//[String:必填]
-        state:"0",//0未处理|1进行中|2已完成
-        B_date:"2018-1-1",//[String:必填]
-        W_Phone:"000000",//[String:必填]
-
     }
 #### 返回数据
     {
@@ -77,6 +70,14 @@
         "errsave":400,//错误信息:[参数有误]
         "data":{
             "status":true,//查询成功[boolean]查询成功|false查询失败
+            mseeage:"空调坏了",//[String:可空]
+            B_Person:"张三",//[String:必填]
+            address:"北科",//[String:必填]
+            B_date:"String",//[String:必填]
+            state:"0",//0未处理|1进行中|2已完成
+            B_date:"2018-1-1",//[String:必填]
+            W_Person:"李四",//[String:必填]
+            W_Phone:"000000",//[String:必填]
         }
     }
 ### 进行中
@@ -85,14 +86,9 @@
     GET
 #### 请求参数
     {
-        D_number:"123456",//[String:必填]
-        B_Person:"张三",//[Strinh:必填]
-        address:"北科",//[String:必填]
-        message:"鼠标失灵",//[String:必填]
-        W_Person:"张三",//[String:必填]
-        B_date:"2018-1-1",//[String:必填]
-        W_Phone:"000000",//[String:必填]
-        state:"1",//0未处理|1进行中|2已完成
+        state:"1",//0未处理|1进行中|2已完成|3已删除    
+        B_Person:"张三",//[String:必填]
+      
     }
 #### 返回数据
     {
@@ -100,6 +96,13 @@
         "errsave":400,//错误信息:[参数有误]
         "data":{
             "status":true,//查询成功[boolean]查询成功|false查询失败
+            B_Person:"张三",//[Strinh:必填]
+            address:"北科",//[String:必填]
+            message:"鼠标失灵",//[String:必填]
+            W_Person:"张三",//[String:必填]
+            B_date:"2018-1-1",//[String:必填]
+            W_Phone:"000000",//[String:必填]
+            state:"1",//0未处理|1进行中|2已完成
         }
     }
 ### 已完成
@@ -108,15 +111,8 @@
     POST
 #### 请求参数
     {
-        D_number:"123456",//[String:必填]
+        state:"2",//0未处理|1进行中|2已完成|3已删除    
         B_Person:"张三",//[Strinh:必填]
-        address:"北科",//[String:必填]
-        G_message:"电脑坏了啥的",//[String:必填]
-        W_Person:"张三",//[String:必填]
-        B_date:"2018-1-1",//[String:必填]
-        W_Phone:"000000",//[String:必填]
-        W_date:"1001-1-1",//[String:必填]
-        state:"2",//0未处理|1进行中|2已完成
 
     }
 #### 返回数据
@@ -125,6 +121,15 @@
         "errsave":400,//错误信息:[参数有误]
         "data":{
             "status":true,//删除成功[boolean]删除成功|false删除失败
+            D_number:"123456",//[String:必填]
+            B_Person:"张三",//[Strinh:必填]
+            address:"北科",//[String:必填]
+            G_message:"电脑坏了啥的",//[String:必填]
+            W_Person:"张三",//[String:必填]
+            B_date:"2018-1-1",//[String:必填]
+            W_Phone:"000000",//[String:必填]
+            W_date:"1001-1-1",//[String:必填]
+            state:"2",//0未处理|1进行中|2已完成
         }
     }
 ### 历史订单
@@ -133,15 +138,8 @@
     GET
 #### 请求参数
     {
-        D_number:"123456",//[String:必填]
         B_Person:"张三",//[Strinh:必填]
-        address:"北科",//[String:必填]
-        G_message:"电脑坏了啥的",//[String:必填]
-        W_Person:"张三",//[String:必填]
-        B_date:"2018-1-1",//[String:必填]
-        W_Phone:"000000",//[String:必填]
-        W_date:"1001-1-1",//[String:必填]  
-        state:"2",//0未处理|1进行中|2已完成    
+        state:"3",//0未处理|1进行中|2已完成|3已删除    
     }
 #### 返回参数
     {
@@ -149,6 +147,15 @@
         "errsave":400,//错误信息:[参数有误]
         "data":{
             "status":true,//查询成功[boolean]查询成功|false查询失败
+            D_number:"123456",//[String:必填]
+            B_Person:"张三",//[Strinh:必填]
+            address:"北科",//[String:必填]
+            G_message:"电脑坏了啥的",//[String:必填]
+            W_Person:"张三",//[String:必填]
+            B_date:"2018-1-1",//[String:必填]
+            W_Phone:"000000",//[String:必填]
+            W_date:"1001-1-1",//[String:必填]  
+            state:"2",//0未处理|1进行中|2已完成|3已删除    
         }
     }
 # 维修人员
@@ -161,14 +168,8 @@
     GET
 #### 请求参数
     {
-        number:"123456",//[String:必填]
-        B_Person:"张三",//[Strinh:必填]
-        address:"北科",//[String:必填]
-        G_message:"电脑坏了啥的",//[String:必填]
-        W_Person:"张三",//[String:必填]
-        B_date:"2018-1-1",//[String:必填]
-        B_Phone:"000000",//[String:必填]
-        state:"0",//0未处理|1进行中|2已完成    
+      
+        state:"0",//0未处理|1进行中|2已完成|3已删除    
     }
 #### 返回参数
     {
@@ -176,6 +177,13 @@
         "errsave":400,//错误信息:[参数有误]
         "data":{
             "status":true,//查询成功[boolean]查询成功|false查询失败
+            number:"123456",//[String:必填]
+            B_Person:"张三",//[Strinh:必填]
+            address:"北科",//[String:必填]
+            G_message:"电脑坏了啥的",//[String:必填]
+            W_Person:"张三",//[String:必填]
+            B_date:"2018-1-1",//[String:必填]
+            B_Phone:"000000",//[String:必填]
         }
     }
 ## 我的任务
@@ -186,14 +194,8 @@
     POST
 #### 请求参数
     {
-        number:"123456",//[String:必填]
-        B_Person:"张三",//[Strinh:必填]
-        address:"北科",//[String:必填]
-        G_message:"电脑坏了啥的",//[String:必填]
-        W_Person:"张三",//[String:必填]
-        B_date:"2018-1-1",//[String:必填]
-        B_Phone:"000000",//[String:必填]
-        state:"0",//0未处理|1进行中|2已完成    
+       state:"0",//0未处理|1进行中|2已完成|3已删除    
+       W_Person:"张三",//[String:必填]
     }
 #### 返回参数
     {
@@ -201,6 +203,13 @@
         "errsave":400,//错误信息:[参数有误]
         "data":{
             "status":true,//修改成功[boolean]修改成功|false修改失败
+             number:"123456",//[String:必填]
+            B_Person:"张三",//[Strinh:必填]
+            address:"北科",//[String:必填]
+            G_message:"电脑坏了啥的",//[String:必填]
+            B_date:"2018-1-1",//[String:必填]
+            B_Phone:"000000",//[String:必填]
+            
         } 
     }
 ### 进行中
@@ -209,15 +218,8 @@
     POST
 #### 请求参数
     {
-        number:"123456",//[String:必填]
-        B_Person:"张三",//[Strinh:必填]
-        address:"北科",//[String:必填]
-        G_message:"电脑坏了啥的",//[String:必填]
+        state:"1",//0未处理|1进行中|2已完成|3已删除    
         W_Person:"张三",//[String:必填]
-        B_date:"2018-1-1",//[String:必填]
-        B_Phone:"000000",//[String:必填]
-        state:"1",//0未处理|1进行中|2已完成    
-
     }
 #### 返回参数
     {
@@ -225,6 +227,12 @@
         "errsave":400,//错误信息:[参数有误]
         "data":{
             "status":true,//修改成功[boolean]修改成功|false修改失败
+            number:"123456",//[String:必填]
+            B_Person:"张三",//[Strinh:必填]
+            address:"北科",//[String:必填]
+            G_message:"电脑坏了啥的",//[String:必填]
+            B_date:"2018-1-1",//[String:必填]
+            B_Phone:"000000",//[String:必填]
         } 
     }
 ### 已完成
@@ -233,16 +241,8 @@
     POST
 #### 请求参数
     {
-        D_number:"123456",//[String:必填]
-        B_Person:"张三",//[Strinh:必填]
-        address:"北科",//[String:必填]
-        G_message:"电脑坏了啥的",//[String:必填]
+        state:"2",//0未处理|1进行中|2已完成|3已删除    
         W_Person:"张三",//[String:必填]
-        W_date:"2018-1-1",//[String:必填]
-        B_date:"2011-4-4",//[String:必填]
-        B_Phone:"000000",//[String:必填]
-        state:"1",//0未处理|1进行中|2已完成    
-
     }
 #### 返回数据
     {
@@ -250,6 +250,14 @@
         "errsave":400,//错误信息:[参数有误]
         "data":{
             "status":true,//删除成功[boolean]删除成功|false删除失败
+            D_number:"123456",//[String:必填]
+            B_Person:"张三",//[Strinh:必填]
+            address:"北科",//[String:必填]
+            G_message:"电脑坏了啥的",//[String:必填]
+            W_date:"2018-1-1",//[String:必填]
+            B_date:"2011-4-4",//[String:必填]
+            B_Phone:"000000",//[String:必填]
+
         }
     }
 ### 历史订单
@@ -258,16 +266,8 @@
     GET
 #### 请求参数
     {
-        D_number:"123456",//[String:必填]
-        B_Person:"张三",//[Strinh:必填]
-        address:"北科",//[String:必填]
-        G_message:"电脑坏了啥的",//[String:必填]
+        state:"3",//0未处理|1进行中|2已完成|3已删除    
         W_Person:"张三",//[String:必填]
-        W_date:"2018-1-1",//[String:必填]
-        B_date:"2011-4-4",//[String:必填]
-        B_Phone:"000000",//[String:必填]
-        state:"1",//0未处理|1进行中|2已完成    
-
     }
 #### 返回数据
     {
@@ -275,6 +275,14 @@
         "errsave":400,//错误信息:[参数有误]
         "data":{
             "status":true,//删除成功[boolean]删除成功|false删除失败
+            D_number:"123456",//[String:必填]
+            B_Person:"张三",//[Strinh:必填]
+            address:"北科",//[String:必填]
+            G_message:"电脑坏了啥的",//[String:必填]
+            W_date:"2018-1-1",//[String:必填]
+            B_date:"2011-4-4",//[String:必填]
+            B_Phone:"000000",//[String:必填]
+
         }
     }
 
@@ -285,25 +293,14 @@
 ### 未处理
 
 #### 请求地址
-    HTTP://localhost:8080/repair/admin_untreated.html
+
 
 #### 请求方式
     POST
 
 #### 请求参数
     {
-        Id:”编号”,//[Long 必填]’
-        D_number:”流水号”,//[String 必填]
-        Mission:”任务描述”,//[String 可为空]
-        B_Person:"报修人",//[String:必填]
-        L_Person:”联系人”,//[String 必填]
-        Address:”地址”,//[String 必填]
-        B_date:”报修时间”,//[date 必填]
-        State:”处理状态”,//[integer 必填]
-        M_phone:”联系电话”,//[String 必填]
-        W_phone:”联系电话”,//[String 可为空]
-        W_Person:”维修人”,//[String 必填]
-        W_date:”完成时间”,//[date 可为空]
+        state:"0",//0未处理|1进行中|2已完成|3已删除    
     }
 #### 返回数据
     {
@@ -313,27 +310,29 @@
             //数据信息
             "status":true,//存储状态[boolean:必填]分配维修人员/挂单成功|false]分配维修人员/挂单失败
             "save":更新成功
+            Id:”编号”,//[Long 必填]’
+            D_number:”流水号”,//[String 必填]
+            Mission:”任务描述”,//[String 可为空]
+            B_Person:"报修人",//[String:必填]
+            L_Person:”联系人”,//[String 必填]
+            Address:”地址”,//[String 必填]
+            B_date:”报修时间”,//[date 必填]
+            M_phone:”联系电话”,//[String 必填]
+            W_phone:”联系电话”,//[String 可为空]
+            W_Person:”维修人”,//[String 必填]
+            W_date:”完成时间”,//[date 可为空]
     }
 ### 进行中
 
 #### 请求地址
-    HTTP://localhost:8080/repair/admin_continue.html
+
 
 #### 请求方式
     POST
 
 #### 请求参数
     {
-        D_number:”流水号”,//[String 必填]
-        Mission:”任务描述”,//[String 可为空]
-        B_Person:"报修人",//[String:必填]
-        L_Person:”联系人”,//[String 必填]
-        Address:”地址”,//[String 必填]
-        B_date:”报修时间”,//[date 必填]
-        State:”处理状态”,//[integer 必填]
-        M_phone:”联系电话”,//[String 必填]
-        S_phone:”联系电话”,//[String 可为空]
-        Serviceman:”维修人”,//[String 必填]
+        state:"1",//0未处理|1进行中|2已完成|3已删除    
     }
 #### 返回数据
     {
@@ -343,28 +342,28 @@
             //数据信息
             "status":true,//存储状态[boolean:必填]挂单成功|false]挂单失败
             "save":更新成功
+            D_number:”流水号”,//[String 必填]
+            Mission:”任务描述”,//[String 可为空]
+            B_Person:"报修人",//[String:必填]
+            L_Person:”联系人”,//[String 必填]
+            Address:”地址”,//[String 必填]
+            B_date:”报修时间”,//[date 必填]
+            State:”处理状态”,//[integer 必填]
+            M_phone:”联系电话”,//[String 必填]
+            S_phone:”联系电话”,//[String 可为空]
+            Serviceman:”维修人”,//[String 必填]
     }
 ### 已完成
 
 #### 请求地址
-    HTTP://localhost:8080/repair/admin_completed.html
+
 
 #### 请求方式
     POST
 
 #### 请求参数
     {
-        D_number:”流水号”,//[String 必填]
-        Mission:”任务描述”,//[String 可为空]
-        B_Person:"报修人",//[String:必填]
-        L_Person:”联系人”,//[String 必填]
-        Address:”地址”,//[String 必填]
-        B_date:”报修时间”,//[date 必填]
-        State:”处理状态”,//[integer 必填]
-        M_phone:”联系电话”,//[String 必填]
-        S_phone:”固定电话”,//[String 可为空]
-        Serviceman:”维修人”,//[String 必填]
-        W_date:”完成时间”,//[date 必填]
+        state:"2",//0未处理|1进行中|2已完成|3已删除    
     }
 #### 返回数据
     {
@@ -374,28 +373,29 @@
             //数据信息
             "status":true,//存储状态[boolean:必填]删除成功|false]删除失败
             "save":更新成功
+            D_number:”流水号”,//[String 必填]
+            Mission:”任务描述”,//[String 可为空]
+            B_Person:"报修人",//[String:必填]
+            L_Person:”联系人”,//[String 必填]
+            Address:”地址”,//[String 必填]
+            B_date:”报修时间”,//[date 必填]
+            State:”处理状态”,//[integer 必填]
+            M_phone:”联系电话”,//[String 必填]
+            S_phone:”固定电话”,//[String 可为空]
+            Serviceman:”维修人”,//[String 必填]
+            W_date:”完成时间”,//[date 必填]
     }
 ### 历史订单
 
 #### 请求地址
-    HTTP://localhost:8080/repair/admin_history.html
+
 
 #### 请求方式
     GET
 
 #### 请求参数
     {
-        D_number:”流水号”,//[String 必填]
-        Mission:”任务描述”,//[String 可为空]
-        B_Person:"报修人",//[String:必填]
-        L_Person:”联系人”,//[String 必填]
-        Address:”地址”,//[String 必填]
-        B_date:”报修时间”,//[date 必填]
-        State:”处理状态”,//[integer 必填]
-        M_phone:”联系电话”,//[String 必填]
-        S_phone:”联系电话”,//[String 可为空]
-        Serviceman:”维修人”,//[String 必填]
-        W_date:”完成时间”,//[date 必填]
+       state:"3",//0未处理|1进行中|2已完成|3已删除    
     }
 #### 返回数据
     {
@@ -404,6 +404,17 @@
     "data":{
             //数据信息
             "save":更新成功
+            D_number:”流水号”,//[String 必填]
+            Mission:”任务描述”,//[String 可为空]
+            B_Person:"报修人",//[String:必填]
+            L_Person:”联系人”,//[String 必填]
+            Address:”地址”,//[String 必填]
+            B_date:”报修时间”,//[date 必填]
+            State:”处理状态”,//[integer 必填]
+            M_phone:”联系电话”,//[String 必填]
+            S_phone:”联系电话”,//[String 可为空]
+            Serviceman:”维修人”,//[String 必填]
+            W_date:”完成时间”,//[date 必填]
     }
 
 ## 人员管理
@@ -411,7 +422,7 @@
 ### 管理用户
 
 #### 请求地址
-    HTTP://localhost:8080/user/admin_user.html
+
 
 #### 请求方式
     POST
@@ -436,7 +447,7 @@
 ### 管理维修人员
 
 #### 请求地址
-    HTTP://localhost:8080/user/admin_user.html
+
 
 #### 请求方式
     POST
@@ -463,7 +474,7 @@
 ### 品牌类型
 
 #### 请求地址
-    HTTP://localhost:8080/product/brand.html
+
 
 #### 请求方式
     POST
@@ -485,7 +496,7 @@
 ### 故障类型
 
 #### 请求地址
-    HTTP://localhost:8080/product/faulttype.html
+
 
 #### 请求方式
     POST
@@ -509,7 +520,7 @@
 ### 添加备件
 
 #### 请求地址
-    HTTP://localhost:8080/product/parts.html
+   
 
 #### 请求方式
     POST
