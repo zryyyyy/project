@@ -360,11 +360,10 @@
                             } 
                     });
                 })
-                $(".app-content").on("click",".edit",function(){
-                    console.log($(this).parent().siblings());
-                  $(this).parent().siblings()[0].innerHTML=`<i class="fa fa-minus-square" aria-hidden="true"></i> <input style="width: 250px;" class="form-control" id="edit_id_td" type="text" aria-describedby="emailHelp" value="${$(this).parent().siblings()[0].innerText}"> `;
+                // $(".app-content").on("click",".edit",function(){
+                //     console.log("1111");
     
-                })
+                // })
                 $(".app-content").on("blur","#edit_id_td",function(){
                     console.log(1);
                    $(this).parent()[0].innerHTML=`${this.value} `;
@@ -373,9 +372,8 @@
     
                 })
                 // $(".app-content").on("click",".edit",function(){
-                //     $("#myModalLabel").html("编辑人员");
-                //     $("#phone").remove();
-                //     $("#user_phone").html(`18236572720`);
+                //      // console.log("1111");
+                    
     
                 // })
             })
@@ -423,6 +421,8 @@
     </div>
     <!-- /.modal -->
 </div>
+
+
 
 
 

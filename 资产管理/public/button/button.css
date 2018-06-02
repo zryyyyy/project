@@ -154,9 +154,6 @@
     text-decoration: none;
     outline: none;
 }
-button{
-    border-width: 1px!important;
-}
 
 .button:active,
 .button.active,

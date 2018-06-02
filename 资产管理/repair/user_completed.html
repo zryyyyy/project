@@ -480,8 +480,8 @@
         $(function(){
             $(".app-content").on("click",".demoslice",function(){
                 swal({ 
-                        title: "确定删除该维修任务吗？", 
-                        text: "您可在历史订单中查看！", 
+                        title: "确定删除该人员信息吗？", 
+                        text: "你将无法恢复该人员！", 
                         type: "warning",
                         showCancelButton: true, 
                         confirmButtonColor: "#DD6B55",
@@ -493,10 +493,10 @@
                         function(isConfirm){ 
                         if (isConfirm) { 
                             console.log(1);
-                        swal("删除！", "该维修任务已经被删除。","success"); 
+                        swal("删除！", "该人员信息已经被删除。","success"); 
                         } else { 
                             console.log(2);
-                        swal("取消！", "已取消删除该维修任务:)","error"); 
+                        swal("取消！", "已取消删除该人员信息:)","error"); 
                         } 
                 });
             })
