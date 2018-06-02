@@ -1,3 +1,29 @@
+# 用户注册
+
+#### 请求地址
+    api/user/register
+#### 请求方式
+    POST
+#### 请求参数
+    {
+        account:"18236567906"//[String:必填]
+        username:"zhangsan",//[String:必填]
+        password:"123456",//[String:必填]
+        roles:"0",//[String:必填]0: 普通用户
+    }
+#### 返回数据
+    {
+        "return":true,//错误代码:[boolean :必填]true 注册成功| false注册失败
+        "errmsg":"",//错误信息:[String:空值登录失败]
+        "data":{
+                    //数据信息
+                    status:
+                    //存取状态
+                    "ok"//[String:必填] 成功 "no"失败
+                    msg:"注册成功" 
+        }
+
+    }
 # 用户登录
 
 #### 请求地址
@@ -419,7 +445,7 @@
 
 ## 人员管理
 
-### 管理用户
+### 添加用户
 
 #### 请求地址
 
@@ -444,7 +470,33 @@
             "status":true,//存储状态[boolean:必填]更改/删除成功|false]更改/删除失败
             "save":更新成功
     }
-### 管理维修人员
+### 用户获取
+
+#### 请求地址
+
+
+#### 请求方式
+    POST
+
+#### 请求参数
+    {
+        
+    }
+#### 返回数据
+    {
+    "return":true,//错误代码:[boolean :必填]true 查询成功| false查询失败 
+    "errsave":400,//错误信息:[参数有误]
+    "data":{
+            //数据信息
+            "status":true,//存储状态[boolean:必填]更改/删除成功|false]更改/删除失败
+            "save":成功
+            Id:”编号”,//[Long 必填]
+            P_name:”用户名”,//[String 必填]
+            Z_date:”注册时间”,//[date 必填]
+            username:”账号/手机号”,//[String 必填]
+            password:”密码”,//[String 必填
+    }
+### 添加维修人员
 
 #### 请求地址
 
@@ -469,9 +521,35 @@
             "status":true,//存储状态[boolean:必填]更改/删除成功|false]更改/删除失败
             "save":更新成功
     }
+### 维修人员信息获取
+
+#### 请求地址
+
+
+#### 请求方式
+    POST
+
+#### 请求参数
+    {
+       
+    }
+#### 返回数据
+    {
+    "return":true,//错误代码:[boolean :必填]true 查询成功| false查询失败 
+    "errsave":400,//错误信息:[参数有误]
+    "data":{
+            //数据信息
+            "status":true,//存储状态[boolean:必填]更改/删除成功|false]更改/删除失败
+            "save":成功
+            Id:”编号”,//[Long 必填]
+            P_name:”用户名”,//[String 必填]
+            Z_date:”注册时间”,//[date 必填]
+            username:”账号/手机号”,//[String 必填]
+            password:”密码”,//[String 必填]
+    }    
 ## 产品管理
 
-### 品牌类型
+### 添加品牌
 
 #### 请求地址
 
@@ -492,6 +570,29 @@
             //数据信息
             "status":true,//存储状态[boolean:必填]增加/更改/删除成功|false]增加/更改/删除失败
             "save":更新成功
+    }
+### 品牌类型
+
+#### 请求地址
+
+
+#### 请求方式
+    POST
+
+#### 请求参数
+    {
+        
+    }
+#### 返回数据
+    {
+    "return":true,//错误代码:[boolean :必填]true 查询成功| false查询失败 
+    "errsave":400,//错误信息:[参数有误]
+    "data":{
+            //数据信息
+            "status":true,//存储状态[boolean:必填]增加/更改/删除成功|false]增加/更改/删除失败
+            "save":更新成功
+            Brand:”品牌”,//[String 必填]
+            Faulttype:”类型”,//[String 必填]
     }
 ### 故障类型
 
@@ -537,4 +638,26 @@
             //数据信息
             "status":true,//存储状态[boolean:必填]增加/更改/删除成功|false]增加/更改/删除失败
             "save":更新成功
+    }
+## 备件管理
+
+### 备件获取
+
+#### 请求地址
+   
+
+#### 请求方式
+    POST
+
+#### 请求参数
+
+#### 返回数据
+    {
+    "return":true,//错误代码:[boolean :必填]true 查询成功| false查询失败 
+    "errsave":400,//错误信息:[参数有误]
+    "data":{
+            //数据信息
+            "status":true,//存储状态[boolean:必填]增加/更改/删除成功|false]增加/更改/删除失败
+            "save":更新成功
+            readyBrand:”品牌”,//[String 必填]
     }
