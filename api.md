@@ -56,7 +56,7 @@
 ### 添加订单
 
 #### 请求地址
-    file://资产管理/repair/add.html
+    api/user/add
 #### 请求方式
     POST
 #### 请求参数
@@ -80,9 +80,11 @@
     }
     }
 ## 我的订单
-
+    
 ### 未处理
 
+#### 请求地址
+    api/user/untreat
 #### 请求方式
     GET
 #### 请求参数
@@ -107,6 +109,9 @@
         }
     }
 ### 进行中
+
+#### 请求地址
+    api/user/continue
 
 #### 请求方式
     GET
@@ -133,6 +138,8 @@
     }
 ### 已完成
 
+#### 请求地址
+    api/user/completed
 #### 请求方式
     POST
 #### 请求参数
@@ -159,6 +166,9 @@
         }
     }
 ### 历史订单
+
+#### 请求地址
+    api/user/history
 
 #### 请求方式
     GET
@@ -190,6 +200,9 @@
 
 ### 未处理
 
+#### 请求地址
+    api/untreat
+
 #### 请求方式
     GET
 #### 请求参数
@@ -216,6 +229,9 @@
 
 ### 未处理
 
+#### 请求地址
+    api/repairman/untreat
+
 #### 请求方式
     POST
 #### 请求参数
@@ -240,6 +256,9 @@
     }
 ### 进行中
 
+#### 请求地址
+    api/repairman/continue
+
 #### 请求方式
     POST
 #### 请求参数
@@ -262,6 +281,9 @@
         } 
     }
 ### 已完成
+
+#### 请求地址
+    api/repairman/completed
 
 #### 请求方式
     POST
@@ -287,6 +309,9 @@
         }
     }
 ### 历史订单
+
+#### 请求地址
+    api/repairman/history
 
 #### 请求方式
     GET
@@ -317,6 +342,10 @@
 ## 维修订单
 
 ### 未处理
+
+#### 请求地址
+    api/untreat
+
 
 #### 请求地址
 
@@ -351,7 +380,7 @@
 ### 进行中
 
 #### 请求地址
-
+    api/admin/continue
 
 #### 请求方式
     POST
@@ -382,7 +411,7 @@
 ### 已完成
 
 #### 请求地址
-
+    api/admin/completed
 
 #### 请求方式
     POST
@@ -414,7 +443,7 @@
 ### 历史订单
 
 #### 请求地址
-
+    api/admin/history
 
 #### 请求方式
     GET
@@ -448,7 +477,7 @@
 ### 添加用户
 
 #### 请求地址
-
+    api/admin/adduser
 
 #### 请求方式
     POST
@@ -473,7 +502,7 @@
 ### 用户获取
 
 #### 请求地址
-
+    api/admin/user
 
 #### 请求方式
     POST
@@ -499,7 +528,7 @@
 ### 添加维修人员
 
 #### 请求地址
-
+    api/admin/addrepairman
 
 #### 请求方式
     POST
@@ -524,7 +553,7 @@
 ### 维修人员信息获取
 
 #### 请求地址
-
+    api/admin/repairman
 
 #### 请求方式
     POST
@@ -552,7 +581,7 @@
 ### 添加品牌
 
 #### 请求地址
-
+    api/admin/addpro
 
 #### 请求方式
     POST
@@ -571,10 +600,10 @@
             "status":true,//存储状态[boolean:必填]增加/更改/删除成功|false]增加/更改/删除失败
             "save":更新成功
     }
-### 品牌类型
+### 品牌获取
 
 #### 请求地址
-
+    api/admin/product
 
 #### 请求方式
     POST
@@ -594,10 +623,10 @@
             Brand:”品牌”,//[String 必填]
             Faulttype:”类型”,//[String 必填]
     }
-### 故障类型
+### 添加故障类型
 
 #### 请求地址
-
+    api/admin/addfault
 
 #### 请求方式
     POST
@@ -616,12 +645,35 @@
             "status":true,//存储状态[boolean:必填]增加/更改/删除成功|false]增加/更改/删除失败
             "save":更新成功
     }
+### 故障类型
+
+#### 请求地址
+    api/admin/faulttype
+
+#### 请求方式
+    POST
+
+#### 请求参数
+    {
+      
+    }
+#### 返回数据
+    {
+    "return":true,//错误代码:[boolean :必填]true 查询成功| false查询失败 
+    "errsave":400,//错误信息:[参数有误]
+    "data":{
+            //数据信息
+            "status":true,//存储状态[boolean:必填]增加/更改/删除成功|false]增加/更改/删除失败
+            "save":更新成功
+            faultname:”故障名称”,//[String 必填]
+            faulttype:”故障类型”,//[String 必填]
+    }
 ## 备件管理
 
 ### 添加备件
 
 #### 请求地址
-   
+    api/admin/addspare
 
 #### 请求方式
     POST
@@ -644,7 +696,7 @@
 ### 备件获取
 
 #### 请求地址
-   
+    api/admin/spare
 
 #### 请求方式
     POST
